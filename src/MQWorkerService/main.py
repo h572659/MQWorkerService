@@ -31,6 +31,14 @@ def main():
         connection = pika.BlockingConnection(pika.ConnectionParameters(ip))
         channel = connection.channel()
 
+        channel.queue_declare(queue="fire_risk_queue", durable=True)
+
+        channel.queue_bind(
+            exchange="fire_risk",
+            queue="fire_risk_queue",
+            routing_key="#"
+        )
+
         channel.exchange_declare(exchange="fire_risk", exchange_type="topic")
         with get_connection() as conn:
             with conn.cursor() as cursor:
