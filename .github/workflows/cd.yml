@@ -41,7 +41,6 @@ jobs:
                     -e IP="${{ secrets.IP }}" \
                     -e MET_CLIENT_ID="${{ secrets.MET_CLIENT_ID }}" \
                     -e MET_CLIENT_SECRET="${{ secrets.MET_CLIENT_SECRET }}" \
-                    -e HOST="${{ secrets.HOST }}" \
                     -e DB_NAME="${{ secrets.DB_NAME }}" \
                     -e DB_USER="${{ secrets.DB_USER }}" \
                     -e DB_PASSWORD="${{ secrets.DB_PASSWORD }}" \

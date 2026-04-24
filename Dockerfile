@@ -15,4 +15,4 @@ RUN uv sync --frozen --no-cache
 
 COPY . .
 
-CMD ["uv", "run", "python", "src/MQWorkerService/main.py"]
+CMD ["uv", "run", "python", "-u", "src/MQWorkerService/main.py"]
